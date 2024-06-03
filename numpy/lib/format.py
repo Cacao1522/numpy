@@ -266,8 +266,8 @@ def dtype_to_descr(dtype):
     """
     # NOTE: that drop_metadata may not return the right dtype e.g. for user
     #       dtypes.  In that case our code below would fail the same, though.
-    new_dtype = drop_metadata(dtype)
-    if new_dtype is not dtype:
+    newDtype = drop_metadata(dtype)
+    if newDtype is not dtype:
         warnings.warn("metadata on a dtype is not saved to an npy/npz. "
                       "Use another format (such as pickle) to store it.",
                       UserWarning, stacklevel=2)
